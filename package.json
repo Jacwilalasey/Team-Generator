@@ -1,0 +1,27 @@
+{
+  "name": "team-generator",
+  "version": "1.0.0",
+  "description": "An app that allows a user to input team member information and displays on a page.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacwilalasey/Team-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jacwilalasey/Team-Generator/issues"
+  },
+  "homepage": "https://github.com/Jacwilalasey/Team-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.5",
+    "jest": "^29.5.0"
+  }
+}
