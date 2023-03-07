@@ -21,11 +21,41 @@ const idList = []
 const menu = () => {
 
     function buildTeam() {
-        
+        if(!fs.existsSync(OUTPUT_DIR)) {
+            fs.mkdirSync(OUTPUT_DIR)
+        }
+        fs.writeFileSync(outputPath, render(staffMembers), 'utf-8');
     }
 
     function addIntern() {
-
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'internName',
+                message: 'What is the interns name?'
+            },
+            {
+                type: 'input',
+                name: 'internId',
+                message: 'What is the interns ID?'
+            },
+            {
+                type: 'input',
+                name: 'internEmail',
+                message: 'What is the interns email?'
+            },
+            {
+                type: 'input',
+                name: 'internSchool',
+                message: 'Where did the intern go to school?'
+            }
+        ]).then(answers => {
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+            staffMembers.push(intern);
+            idList.push(answers.internId);
+            console.log(intern)
+            createTeam();
+        })
     }
 
 
@@ -95,7 +125,7 @@ const menu = () => {
     function createTeam() {
         inquirer.prompt([
             {
-                type: 'input',
+                type: 'list',
                 name: 'memberType',
                 message: 'What role does this team member hold?',
                 choices: [
