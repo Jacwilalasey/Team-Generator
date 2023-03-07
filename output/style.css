@@ -1,0 +1,23 @@
+.jumbotron {
+    font-family: 'Climate Crisis', cursive;
+    background-color: aquamarine;
+    letter-spacing: .25rem;
+    border-bottom: 5px solid white;
+}
+
+body {
+    background-color: #fde5b4;
+}
+
+.employee-card {
+    margin: 1.5em;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    box-shadow: 0px 0px 5px 1px;
+}
+
+.card-header {
+    background-color: aquamarine;
+    text-align: center;
+}
+
